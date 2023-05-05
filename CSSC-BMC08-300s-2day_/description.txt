@@ -1,6 +1,16 @@
 algorithm_cutoff_memory: '?'
 algorithm_cutoff_time: 300
-algorithms_deterministic: '?'
+algorithms_deterministic:
+- clasp-cssc_clasp-2.1-sat-t1
+- forl-nodrup_forl-nodrup-params
+- gnovelty+GCa_gnovelty+GCa-params
+- gnovelty+GCwa_gnovelty+GCwa-params
+- gnovelty+PCL_gnovelty+PCL-params
+- lingeling_lingeling-params-mixed
+- riss3g_riss3g-params
+- sat4j_sat4j-params
+- simpsat_simpsat-params
+- Solver43_Solver43-params
 algorithms_stochastic: 'null'
 default_steps:
 - Pre
@@ -11,239 +21,200 @@ feature_steps:
   Basic:
     provides:
     - vars-clauses-ratio
-    - POSNEG-RATIO-CLAUSE-mean
     - POSNEG-RATIO-CLAUSE-coeff-variation
-    - POSNEG-RATIO-CLAUSE-min
-    - POSNEG-RATIO-CLAUSE-max
-    - POSNEG-RATIO-CLAUSE-entropy
     - VCG-CLAUSE-mean
-    - VCG-CLAUSE-coeff-variation
+    - POSNEG-RATIO-CLAUSE-entropy
+    - POSNEG-RATIO-CLAUSE-max
+    - UNARY
     - VCG-CLAUSE-min
     - VCG-CLAUSE-max
-    - VCG-CLAUSE-entropy
-    - UNARY
-    - BINARY+
     - TRINARY+
+    - BINARY+
+    - VCG-CLAUSE-entropy
+    - POSNEG-RATIO-CLAUSE-mean
+    - POSNEG-RATIO-CLAUSE-min
+    - VCG-CLAUSE-coeff-variation
     requires:
     - Pre
   CG:
-    provides:
-    - CG-mean
-    - CG-coeff-variation
-    - CG-min
-    - CG-max
-    - CG-entropy
-    - cluster-coeff-mean
-    - cluster-coeff-coeff-variation
-    - cluster-coeff-min
-    - cluster-coeff-max
-    - cluster-coeff-entropy
+    provides: []
+    requires:
+    - Pre
+  KLB:
+    provides: []
     requires:
     - Pre
   Pre:
     provides:
-    - nvarsOrig
-    - nclausesOrig
-    - nvars
     - nclauses
-    - reducedVars
+    - nvarsOrig
+    - nvars
+    - nclausesOrig
     - reducedClauses
+    - reducedVars
   cl:
     provides:
-    - cl-num-mean
-    - cl-num-coeff-variation
-    - cl-num-min
     - cl-num-max
-    - cl-num-q90
-    - cl-num-q10
-    - cl-num-q75
-    - cl-num-q25
-    - cl-num-q50
-    - cl-size-mean
-    - cl-size-coeff-variation
-    - cl-size-min
-    - cl-size-max
-    - cl-size-q90
-    - cl-size-q10
     - cl-size-q75
+    - cl-num-q75
+    - cl-num-min
+    - cl-size-q10
     - cl-size-q25
     - cl-size-q50
+    - cl-num-mean
+    - cl-num-q90
+    - cl-num-q25
+    - cl-num-q50
+    - cl-size-coeff-variation
+    - cl-size-min
+    - cl-size-mean
+    - cl-num-q10
+    - cl-num-coeff-variation
+    - cl-size-q90
+    - cl-size-max
     requires:
     - Pre
   lobjois:
     provides:
-    - lobjois-mean-depth-over-vars
     - lobjois-log-num-nodes-over-vars
+    - lobjois-mean-depth-over-vars
     requires:
     - Pre
   ls-gsat:
     provides:
+    - gsat_FirstLocalMinRatio_Mean
     - gsat_BestSolution_Mean
+    - gsat_FirstLocalMinStep_Median
+    - gsat_FirstLocalMinStep_Q.90
+    - gsat_FirstLocalMinStep_Q.10
+    - gsat_BestAvgImprovement_Mean
     - gsat_BestSolution_CoeffVariance
     - gsat_FirstLocalMinStep_Mean
-    - gsat_FirstLocalMinStep_CoeffVariance
-    - gsat_FirstLocalMinStep_Median
-    - gsat_FirstLocalMinStep_Q.10
-    - gsat_FirstLocalMinStep_Q.90
-    - gsat_BestAvgImprovement_Mean
     - gsat_BestAvgImprovement_CoeffVariance
-    - gsat_FirstLocalMinRatio_Mean
+    - gsat_FirstLocalMinStep_CoeffVariance
     - gsat_FirstLocalMinRatio_CoeffVariance
-    - ls-gsat-featuretime
     requires:
     - Pre
   ls-saps:
     provides:
-    - saps_BestSolution_Mean
-    - saps_BestSolution_CoeffVariance
-    - saps_FirstLocalMinStep_Mean
-    - saps_FirstLocalMinStep_CoeffVariance
-    - saps_FirstLocalMinStep_Median
-    - saps_FirstLocalMinStep_Q.10
-    - saps_FirstLocalMinStep_Q.90
     - saps_BestAvgImprovement_Mean
-    - saps_BestAvgImprovement_CoeffVariance
+    - saps_BestSolution_CoeffVariance
+    - saps_FirstLocalMinStep_CoeffVariance
+    - saps_BestSolution_Mean
+    - saps_FirstLocalMinStep_Q.10
     - saps_FirstLocalMinRatio_Mean
+    - saps_BestAvgImprovement_CoeffVariance
+    - saps_FirstLocalMinStep_Median
     - saps_FirstLocalMinRatio_CoeffVariance
+    - saps_FirstLocalMinStep_Mean
+    - saps_FirstLocalMinStep_Q.90
     requires:
     - Pre
   sp:
     provides:
+    - SP-unconstraint-q25
     - SP-bias-mean
-    - SP-bias-coeff-variation
-    - SP-bias-min
-    - SP-bias-max
     - SP-bias-q90
     - SP-bias-q10
-    - SP-bias-q75
+    - SP-bias-max
     - SP-bias-q25
     - SP-bias-q50
-    - SP-unconstraint-mean
+    - SP-bias-min
     - SP-unconstraint-coeff-variation
+    - SP-bias-q75
+    - SP-unconstraint-q90
+    - SP-unconstraint-q75
+    - SP-bias-coeff-variation
+    - SP-unconstraint-q50
+    - SP-unconstraint-mean
+    - SP-unconstraint-q10
     - SP-unconstraint-min
     - SP-unconstraint-max
-    - SP-unconstraint-q90
-    - SP-unconstraint-q10
-    - SP-unconstraint-q75
-    - SP-unconstraint-q25
-    - SP-unconstraint-q50
-    - sp-featuretime
     requires:
     - Pre
 features_cutoff_memory: '?'
 features_cutoff_time: '?'
 features_deterministic:
-- INSTANCE_NAME
-- nvarsOrig
-- nclausesOrig
-- nvars
-- nclauses
-- reducedVars
-- reducedClauses
-- vars-clauses-ratio
-- POSNEG-RATIO-CLAUSE-mean
-- POSNEG-RATIO-CLAUSE-coeff-variation
-- POSNEG-RATIO-CLAUSE-min
-- POSNEG-RATIO-CLAUSE-max
-- POSNEG-RATIO-CLAUSE-entropy
-- VCG-CLAUSE-mean
-- VCG-CLAUSE-coeff-variation
-- VCG-CLAUSE-min
-- VCG-CLAUSE-max
-- VCG-CLAUSE-entropy
-- UNARY
-- BINARY+
-- TRINARY+
-- VCG-VAR-mean
-- VCG-VAR-coeff-variation
-- VCG-VAR-min
-- VCG-VAR-max
-- VCG-VAR-entropy
-- POSNEG-RATIO-VAR-mean
-- POSNEG-RATIO-VAR-coeff-variation
-- POSNEG-RATIO-VAR-min
-- POSNEG-RATIO-VAR-max
-- POSNEG-RATIO-VAR-entropy
-- HORNY-VAR-mean
-- HORNY-VAR-coeff-variation
-- HORNY-VAR-min
-- HORNY-VAR-max
-- HORNY-VAR-entropy
-- horn-clauses-fraction
-- VG-mean
-- VG-coeff-variation
-- VG-min
-- VG-max
-- CG-mean
-- CG-coeff-variation
-- CG-min
-- CG-max
-- CG-entropy
-- cluster-coeff-mean
-- cluster-coeff-coeff-variation
-- cluster-coeff-min
-- cluster-coeff-max
-- cluster-coeff-entropy
-- cl-num-mean
-- cl-num-coeff-variation
 - cl-num-min
-- cl-num-max
-- cl-num-q90
-- cl-num-q10
-- cl-num-q75
-- cl-num-q25
-- cl-num-q50
-- cl-size-mean
-- cl-size-coeff-variation
-- cl-size-min
-- cl-size-max
-- cl-size-q90
-- cl-size-q10
-- cl-size-q75
-- cl-size-q25
-- cl-size-q50
-- SP-bias-mean
-- SP-bias-coeff-variation
-- SP-bias-min
-- SP-bias-max
-- SP-bias-q90
-- SP-bias-q10
-- SP-bias-q75
-- SP-bias-q25
+- nvarsOrig
 - SP-bias-q50
-- SP-unconstraint-mean
-- SP-unconstraint-coeff-variation
-- SP-unconstraint-min
-- SP-unconstraint-max
-- SP-unconstraint-q90
-- SP-unconstraint-q10
-- SP-unconstraint-q75
-- SP-unconstraint-q25
-- SP-unconstraint-q50
-- saps_BestSolution_Mean
-- saps_BestSolution_CoeffVariance
-- saps_FirstLocalMinStep_Mean
-- saps_FirstLocalMinStep_CoeffVariance
-- saps_FirstLocalMinStep_Median
-- saps_FirstLocalMinStep_Q.10
-- saps_FirstLocalMinStep_Q.90
-- saps_BestAvgImprovement_Mean
-- saps_BestAvgImprovement_CoeffVariance
-- saps_FirstLocalMinRatio_Mean
-- saps_FirstLocalMinRatio_CoeffVariance
-- gsat_BestSolution_Mean
-- gsat_BestSolution_CoeffVariance
-- gsat_FirstLocalMinStep_Mean
-- gsat_FirstLocalMinStep_CoeffVariance
-- gsat_FirstLocalMinStep_Median
-- gsat_FirstLocalMinStep_Q.10
-- gsat_FirstLocalMinStep_Q.90
+- VCG-CLAUSE-max
+- SP-bias-q75
+- BINARY+
+- reducedClauses
+- cl-size-min
+- cl-size-mean
+- POSNEG-RATIO-CLAUSE-min
+- SP-bias-mean
+- VCG-CLAUSE-mean
+- cl-size-q25
 - gsat_BestAvgImprovement_Mean
-- gsat_BestAvgImprovement_CoeffVariance
-- gsat_FirstLocalMinRatio_Mean
-- gsat_FirstLocalMinRatio_CoeffVariance
+- nclausesOrig
+- saps_BestAvgImprovement_CoeffVariance
+- SP-unconstraint-max
+- cl-size-max
+- cl-size-q10
+- POSNEG-RATIO-CLAUSE-coeff-variation
+- SP-bias-q10
+- SP-unconstraint-q25
+- POSNEG-RATIO-CLAUSE-entropy
+- POSNEG-RATIO-CLAUSE-max
+- SP-unconstraint-coeff-variation
+- SP-unconstraint-q75
+- SP-unconstraint-q50
+- saps_BestSolution_CoeffVariance
 - lobjois-mean-depth-over-vars
+- SP-unconstraint-q10
+- saps_FirstLocalMinRatio_CoeffVariance
+- cl-size-q75
+- SP-unconstraint-mean
+- VCG-CLAUSE-entropy
+- gsat_FirstLocalMinRatio_Mean
+- SP-bias-q25
+- SP-unconstraint-q90
+- gsat_BestAvgImprovement_CoeffVariance
+- SP-bias-max
+- cl-num-mean
+- cl-num-q25
+- POSNEG-RATIO-CLAUSE-mean
+- cl-size-q50
+- gsat_BestSolution_CoeffVariance
+- SP-bias-coeff-variation
+- reducedVars
+- gsat_FirstLocalMinStep_Q.10
+- saps_BestAvgImprovement_Mean
 - lobjois-log-num-nodes-over-vars
+- VCG-CLAUSE-min
+- gsat_FirstLocalMinStep_Mean
+- cl-size-q90
+- saps_FirstLocalMinStep_Mean
+- cl-num-q75
+- TRINARY+
+- cl-num-max
+- gsat_BestSolution_Mean
+- UNARY
+- cl-num-q50
+- saps_FirstLocalMinStep_Median
+- cl-num-q10
+- gsat_FirstLocalMinStep_CoeffVariance
+- saps_FirstLocalMinStep_Q.90
+- nclauses
+- gsat_FirstLocalMinStep_Q.90
+- nvars
+- saps_FirstLocalMinStep_CoeffVariance
+- saps_FirstLocalMinRatio_Mean
+- saps_FirstLocalMinStep_Q.10
+- cl-size-coeff-variation
+- vars-clauses-ratio
+- SP-bias-min
+- saps_BestSolution_Mean
+- cl-num-q90
+- gsat_FirstLocalMinStep_Median
+- SP-bias-q90
+- cl-num-coeff-variation
+- VCG-CLAUSE-coeff-variation
+- gsat_FirstLocalMinRatio_CoeffVariance
+- SP-unconstraint-min
 features_stochastic: ''
 maximize:
 - false
@@ -278,7 +249,9 @@ metainfo_algorithms:
   simpsat_simpsat-params:
     configuration: ''
     deterministic: 'true'
-number_of_feature_steps: 8
-performance_measures: runtime
-performance_type: runtime
+number_of_feature_steps: 9
+performance_measures: 
+  - runtime
+performance_type:
+  - runtime
 scenario_id: CSSC-BMC08-300s-2day
