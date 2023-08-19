@@ -1,0 +1,232 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 3600.0
+default_steps:
+- GNN
+feature_steps:
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+    - gnn_16
+    - gnn_17
+    - gnn_18
+    - gnn_19
+    - gnn_20
+    - gnn_21
+    - gnn_22
+    - gnn_23
+    - gnn_24
+    - gnn_25
+    - gnn_26
+    - gnn_27
+    - gnn_28
+    - gnn_29
+    - gnn_30
+    - gnn_31
+    - gnn_32
+    - gnn_33
+    - gnn_34
+    - gnn_35
+    - gnn_36
+    - gnn_37
+    - gnn_38
+    - gnn_39
+    - gnn_40
+    - gnn_41
+    - gnn_42
+    - gnn_43
+    - gnn_44
+    - gnn_45
+    - gnn_46
+    - gnn_47
+    - gnn_48
+    - gnn_49
+    - gnn_50
+    - gnn_51
+    - gnn_52
+    - gnn_53
+    - gnn_54
+    - gnn_55
+    - gnn_56
+    - gnn_57
+    - gnn_58
+    - gnn_59
+    - gnn_60
+    - gnn_61
+    - gnn_62
+    - gnn_63
+features_cutoff_memory: '?'
+features_cutoff_time: '60'
+features_deterministic:
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+- gnn_16
+- gnn_17
+- gnn_18
+- gnn_19
+- gnn_20
+- gnn_21
+- gnn_22
+- gnn_23
+- gnn_24
+- gnn_25
+- gnn_26
+- gnn_27
+- gnn_28
+- gnn_29
+- gnn_30
+- gnn_31
+- gnn_32
+- gnn_33
+- gnn_34
+- gnn_35
+- gnn_36
+- gnn_37
+- gnn_38
+- gnn_39
+- gnn_40
+- gnn_41
+- gnn_42
+- gnn_43
+- gnn_44
+- gnn_45
+- gnn_46
+- gnn_47
+- gnn_48
+- gnn_49
+- gnn_50
+- gnn_51
+- gnn_52
+- gnn_53
+- gnn_54
+- gnn_55
+- gnn_56
+- gnn_57
+- gnn_58
+- gnn_59
+- gnn_60
+- gnn_61
+- gnn_62
+- gnn_63
+features_stochastic: ''
+maximize:
+- false
+metainfo_algorithms:
+  ADS-cryptominisat:
+    configuration: ''
+    deterministic: true
+  ADS-cryptominisat-autotune:
+    configuration: ''
+    deterministic: true
+  ADS-dccaSatToRiss:
+    configuration: ''
+    deterministic: true
+  ADS-glucose-adapt:
+    configuration: ''
+    deterministic: true
+  ADS-glucose-community-switching:
+    configuration: ''
+    deterministic: true
+  BreakIDGlucose2:
+    configuration: ''
+    deterministic: true
+  CCAglucose2015:
+    configuration: ''
+    deterministic: true
+  COMiniSatPS_Main_Sequence:
+    configuration: ''
+    deterministic: true
+  COMiniSatPS_Subdwarf:
+    configuration: ''
+    deterministic: true
+  Glucose_nbSat:
+    configuration: ''
+    deterministic: true
+  Glucose_nbSatRsltn:
+    configuration: ''
+    deterministic: true
+  GlueMiniSat_2.2.10:
+    configuration: ''
+    deterministic: true
+  GlueMiniSat_2.2.10-5:
+    configuration: ''
+    deterministic: true
+  Lingeling_sr15bal:
+    configuration: ''
+    deterministic: true
+  Lingeling_sr15baq:
+    configuration: ''
+    deterministic: true
+  Nigma-1.2.86:
+    configuration: ''
+    deterministic: true
+  Nigma-1.2.87:
+    configuration: ''
+    deterministic: true
+  abcdSAT:
+    configuration: ''
+    deterministic: true
+  glucose-default:
+    configuration: ''
+    deterministic: true
+  glueminisat-Actmini:
+    configuration: ''
+    deterministic: true
+  minisat_BCD:
+    configuration: ''
+    deterministic: true
+  multi-sat-g2_0:
+    configuration: ''
+    deterministic: true
+  multi-sat-g2_2:
+    configuration: ''
+    deterministic: true
+  or-tools:
+    configuration: ''
+    deterministic: true
+  ratselfax_cnf_215_final:
+    configuration: ''
+    deterministic: true
+  riss_505_1:
+    configuration: ''
+    deterministic: true
+  riss_505_2:
+    configuration: ''
+    deterministic: true
+  satUZK-seq:
+    configuration: ''
+    deterministic: true
+number_of_feature_steps: 1
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: SAT15-INDU-GNNON-PAR10

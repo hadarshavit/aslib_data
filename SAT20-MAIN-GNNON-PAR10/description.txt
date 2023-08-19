@@ -1,0 +1,416 @@
+algorithm_cutoff_memory: 128000
+algorithm_cutoff_time: 5000.0
+algorithms_deterministic:
+- CTSat+default
+- CTSat_noproof+default
+- CaDiCaL-sc2020+default
+- DurianSat+default
+- ExMapleLCMDistChronoBT+PADC_DL
+- ExMapleLCMDistChronoBT+PADC_DL_OVAU_Exp
+- ExMapleLCMDistChronoBT+PADC_DL_OVAU_Lin
+- ExMapleLCMDistChronoBT+PSIDS_DL
+- GlucoseEsbpSel+default
+- Kissat-sc2020-default+default
+- Kissat-sc2020-sat+default
+- Kissat-sc2020-unsat+default
+- MLCMDCHRONOBT-DL-V2.2SCAVELRFV+default
+- MLCMDChronoBT-DL-Scavel+default
+- Maple-LCM-Dist-alluip-trail+default
+- MapleCOMSPS_LRB_VSIDS_2+LRB_VSIDS_2_init
+- MapleCOMSPS_LRB_VSIDS_2+default_drup
+- MapleLCMDistChronoBT-DL-Scavel01+default
+- MapleLCMDistChronoBT-DL-Scavel02+default
+- MapleLCMDistChronoBT-DL-f2trc+default
+- MapleLCMDistChronoBT-DL-v3+default
+- MapleLCMDistChronoBT-f2trc+default
+- MapleLCMDistChronoBT-f2trc-s+default
+- Maple_CM+dist+default
+- Maple_CM+dist+sattime2s+-+default
+- Maple_CM+dist+simp2--+default
+- Maple_CMused+dist+default
+- Maple_mix+default
+- Maple_simp+default
+- ParaFROST+default
+- ParaFROST_ALL+default
+- ParaFROST_CBT+default
+- ParaFROST_HRE+default
+- PauSat+default
+- PauSat_noproof+default
+- PauSat_noproof+noproof
+- Relaxed_LCMDCBDL+default
+- Relaxed_LCMDCBDL_newTech+default
+- Relaxed_LCMDCBDL_noTimePara+default
+- Riss+NOUNSAT_proof-fixed
+- Riss+default_proof
+- Riss-nolimit+NOLIMIT
+- SLIME+default
+- SLIME+default-no-drup
+- Top16-Undominated-LC-MapleLCMDiscChronoBT-DL+default
+- Top24-Undominated-LC-MapleLCMDiscChronoBT-DL+default
+- Top36-Undominated-LC-MapleLCMDiscChronoBT-DL+default
+- Undominated-LC-MapleLCMDiscChronoBT-DL+default
+- abcdsat_n20+default
+- cadical-alluip+default
+- cadical-alluip-trail+default
+- cadical-trail+default
+- cryptominisat-ccnr+default
+- cryptominisat-ccnr-lsids+default
+- cryptominisat-ccnr-lsids-nolimits+default
+- cryptominisat-ccnr-nolimits+default
+- cryptominisat-walksat+default
+- cryptominisat-walksat-nolimits+default
+- exp_L_MLD_CBT_DL+default
+- exp_V_LGB_MLD_CBT_DL+default
+- exp_V_L_MLD_CBT_DL+default
+- exp_V_MLD_CBT_DL+default
+- glucose-3.0-inprocess+default
+- glucose3.0+proofs
+- mergesat+default
+- optsat_m20+default
+- upGlucose-3.0_PADC+default
+algorithms_stochastic: ''
+default_steps:
+- GNN
+feature_steps:
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+    - gnn_16
+    - gnn_17
+    - gnn_18
+    - gnn_19
+    - gnn_20
+    - gnn_21
+    - gnn_22
+    - gnn_23
+    - gnn_24
+    - gnn_25
+    - gnn_26
+    - gnn_27
+    - gnn_28
+    - gnn_29
+    - gnn_30
+    - gnn_31
+    - gnn_32
+    - gnn_33
+    - gnn_34
+    - gnn_35
+    - gnn_36
+    - gnn_37
+    - gnn_38
+    - gnn_39
+    - gnn_40
+    - gnn_41
+    - gnn_42
+    - gnn_43
+    - gnn_44
+    - gnn_45
+    - gnn_46
+    - gnn_47
+    - gnn_48
+    - gnn_49
+    - gnn_50
+    - gnn_51
+    - gnn_52
+    - gnn_53
+    - gnn_54
+    - gnn_55
+    - gnn_56
+    - gnn_57
+    - gnn_58
+    - gnn_59
+    - gnn_60
+    - gnn_61
+    - gnn_62
+    - gnn_63
+features_deterministic:
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+- gnn_16
+- gnn_17
+- gnn_18
+- gnn_19
+- gnn_20
+- gnn_21
+- gnn_22
+- gnn_23
+- gnn_24
+- gnn_25
+- gnn_26
+- gnn_27
+- gnn_28
+- gnn_29
+- gnn_30
+- gnn_31
+- gnn_32
+- gnn_33
+- gnn_34
+- gnn_35
+- gnn_36
+- gnn_37
+- gnn_38
+- gnn_39
+- gnn_40
+- gnn_41
+- gnn_42
+- gnn_43
+- gnn_44
+- gnn_45
+- gnn_46
+- gnn_47
+- gnn_48
+- gnn_49
+- gnn_50
+- gnn_51
+- gnn_52
+- gnn_53
+- gnn_54
+- gnn_55
+- gnn_56
+- gnn_57
+- gnn_58
+- gnn_59
+- gnn_60
+- gnn_61
+- gnn_62
+- gnn_63
+features_stochastic: ''
+maximize:
+- false
+metainfo_algorithms:
+  CTSat+default:
+    configuration: ''
+    deterministic: true
+  CTSat_noproof+default:
+    configuration: ''
+    deterministic: true
+  CaDiCaL-sc2020+default:
+    configuration: ''
+    deterministic: true
+  DurianSat+default:
+    configuration: ''
+    deterministic: true
+  ExMapleLCMDistChronoBT+PADC_DL:
+    configuration: ''
+    deterministic: true
+  ExMapleLCMDistChronoBT+PADC_DL_OVAU_Exp:
+    configuration: ''
+    deterministic: true
+  ExMapleLCMDistChronoBT+PADC_DL_OVAU_Lin:
+    configuration: ''
+    deterministic: true
+  ExMapleLCMDistChronoBT+PSIDS_DL:
+    configuration: ''
+    deterministic: true
+  GlucoseEsbpSel+default:
+    configuration: ''
+    deterministic: true
+  Kissat-sc2020-default+default:
+    configuration: ''
+    deterministic: true
+  Kissat-sc2020-sat+default:
+    configuration: ''
+    deterministic: true
+  Kissat-sc2020-unsat+default:
+    configuration: ''
+    deterministic: true
+  MLCMDCHRONOBT-DL-V2.2SCAVELRFV+default:
+    configuration: ''
+    deterministic: true
+  MLCMDChronoBT-DL-Scavel+default:
+    configuration: ''
+    deterministic: true
+  Maple-LCM-Dist-alluip-trail+default:
+    configuration: ''
+    deterministic: true
+  MapleCOMSPS_LRB_VSIDS_2+LRB_VSIDS_2_init:
+    configuration: ''
+    deterministic: true
+  MapleCOMSPS_LRB_VSIDS_2+default_drup:
+    configuration: ''
+    deterministic: true
+  MapleLCMDistChronoBT-DL-Scavel01+default:
+    configuration: ''
+    deterministic: true
+  MapleLCMDistChronoBT-DL-Scavel02+default:
+    configuration: ''
+    deterministic: true
+  MapleLCMDistChronoBT-DL-f2trc+default:
+    configuration: ''
+    deterministic: true
+  MapleLCMDistChronoBT-DL-v3+default:
+    configuration: ''
+    deterministic: true
+  MapleLCMDistChronoBT-f2trc+default:
+    configuration: ''
+    deterministic: true
+  MapleLCMDistChronoBT-f2trc-s+default:
+    configuration: ''
+    deterministic: true
+  Maple_CM+dist+default:
+    configuration: ''
+    deterministic: true
+  Maple_CM+dist+sattime2s+-+default:
+    configuration: ''
+    deterministic: true
+  Maple_CM+dist+simp2--+default:
+    configuration: ''
+    deterministic: true
+  Maple_CMused+dist+default:
+    configuration: ''
+    deterministic: true
+  Maple_mix+default:
+    configuration: ''
+    deterministic: true
+  Maple_simp+default:
+    configuration: ''
+    deterministic: true
+  ParaFROST+default:
+    configuration: ''
+    deterministic: true
+  ParaFROST_ALL+default:
+    configuration: ''
+    deterministic: true
+  ParaFROST_CBT+default:
+    configuration: ''
+    deterministic: true
+  ParaFROST_HRE+default:
+    configuration: ''
+    deterministic: true
+  PauSat+default:
+    configuration: ''
+    deterministic: true
+  PauSat_noproof+default:
+    configuration: ''
+    deterministic: true
+  PauSat_noproof+noproof:
+    configuration: ''
+    deterministic: true
+  Relaxed_LCMDCBDL+default:
+    configuration: ''
+    deterministic: true
+  Relaxed_LCMDCBDL_newTech+default:
+    configuration: ''
+    deterministic: true
+  Relaxed_LCMDCBDL_noTimePara+default:
+    configuration: ''
+    deterministic: true
+  Riss+NOUNSAT_proof-fixed:
+    configuration: ''
+    deterministic: true
+  Riss+default_proof:
+    configuration: ''
+    deterministic: true
+  Riss-nolimit+NOLIMIT:
+    configuration: ''
+    deterministic: true
+  SLIME+default:
+    configuration: ''
+    deterministic: true
+  SLIME+default-no-drup:
+    configuration: ''
+    deterministic: true
+  Top16-Undominated-LC-MapleLCMDiscChronoBT-DL+default:
+    configuration: ''
+    deterministic: true
+  Top24-Undominated-LC-MapleLCMDiscChronoBT-DL+default:
+    configuration: ''
+    deterministic: true
+  Top36-Undominated-LC-MapleLCMDiscChronoBT-DL+default:
+    configuration: ''
+    deterministic: true
+  Undominated-LC-MapleLCMDiscChronoBT-DL+default:
+    configuration: ''
+    deterministic: true
+  abcdsat_n20+default:
+    configuration: ''
+    deterministic: true
+  cadical-alluip+default:
+    configuration: ''
+    deterministic: true
+  cadical-alluip-trail+default:
+    configuration: ''
+    deterministic: true
+  cadical-trail+default:
+    configuration: ''
+    deterministic: true
+  cryptominisat-ccnr+default:
+    configuration: ''
+    deterministic: true
+  cryptominisat-ccnr-lsids+default:
+    configuration: ''
+    deterministic: true
+  cryptominisat-ccnr-lsids-nolimits+default:
+    configuration: ''
+    deterministic: true
+  cryptominisat-ccnr-nolimits+default:
+    configuration: ''
+    deterministic: true
+  cryptominisat-walksat+default:
+    configuration: ''
+    deterministic: true
+  cryptominisat-walksat-nolimits+default:
+    configuration: ''
+    deterministic: true
+  exp_L_MLD_CBT_DL+default:
+    configuration: ''
+    deterministic: true
+  exp_V_LGB_MLD_CBT_DL+default:
+    configuration: ''
+    deterministic: true
+  exp_V_L_MLD_CBT_DL+default:
+    configuration: ''
+    deterministic: true
+  exp_V_MLD_CBT_DL+default:
+    configuration: ''
+    deterministic: true
+  glucose-3.0-inprocess+default:
+    configuration: ''
+    deterministic: true
+  glucose3.0+proofs:
+    configuration: ''
+    deterministic: true
+  mergesat+default:
+    configuration: ''
+    deterministic: true
+  optsat_m20+default:
+    configuration: ''
+    deterministic: true
+  upGlucose-3.0_PADC+default:
+    configuration: ''
+    deterministic: true
+number_of_feature_steps: 1
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: SAT20-MAIN-GNNON-PAR10

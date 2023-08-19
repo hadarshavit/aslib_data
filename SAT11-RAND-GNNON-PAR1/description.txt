@@ -1,0 +1,79 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 5000
+default_steps:
+- GNN
+feature_steps:
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+features_cutoff_memory: '?'
+features_cutoff_time: 5000
+features_deterministic:
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+features_stochastic: null
+maximize:
+- false
+metainfo_algorithms:
+  EagleUP_1.565.350:
+    configuration: ''
+    deterministic: true
+  MPhaseSAT_M_2011-02-16:
+    configuration: ''
+    deterministic: true
+  SAT09referencesolverTNM_2009-03-22:
+    configuration: ''
+    deterministic: true
+  SAT09referencesolvergnovelty+2_2009-03-22:
+    configuration: ''
+    deterministic: true
+  SAT09referencesolvermarch_hi_hi:
+    configuration: ''
+    deterministic: true
+  adaptg2wsat2011_2011-03-02:
+    configuration: ''
+    deterministic: true
+  march_rw_2011-03-02:
+    configuration: ''
+    deterministic: true
+  sattime2011_2011-03-02:
+    configuration: ''
+    deterministic: true
+  sparrow2011_sparrow2011_ubcsat1.2_2011-03-02:
+    configuration: ''
+    deterministic: true
+number_of_feature_steps: 1
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: SAT11-RAND-GNNON-PAR1

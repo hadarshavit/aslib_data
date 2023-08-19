@@ -1,0 +1,97 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 5000
+default_steps:
+- GNN
+feature_steps:
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+features_cutoff_memory: '?'
+features_cutoff_time: 5000
+features_deterministic:
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+features_stochastic: null
+maximize:
+- false
+metainfo_algorithms:
+  CryptoMiniSat_Strange-Night2-st_fixed_:
+    configuration: ''
+    deterministic: true
+  MPhaseSAT_2011-02-15:
+    configuration: ''
+    deterministic: true
+  PicoSAT_941:
+    configuration: ''
+    deterministic: true
+  QuteRSat_2011-05-12_fixed_:
+    configuration: ''
+    deterministic: true
+  RestartSAT_B95:
+    configuration: ''
+    deterministic: true
+  SAT07referencesolverminisat_SAT2007:
+    configuration: ''
+    deterministic: true
+  SAT09referencesolverclasp_1.2.0-SAT09-32:
+    configuration: ''
+    deterministic: true
+  SApperloT2010_2011-05-15_fixed_:
+    configuration: ''
+    deterministic: true
+  Sol_2011-04-04:
+    configuration: ''
+    deterministic: true
+  clasp_2.0-R4092-crafted:
+    configuration: ''
+    deterministic: true
+  glucose_2:
+    configuration: ''
+    deterministic: true
+  jMiniSat_2011:
+    configuration: ''
+    deterministic: true
+  sathys_2011-04-01:
+    configuration: ''
+    deterministic: true
+  sattime+_2011-03-02:
+    configuration: ''
+    deterministic: true
+  sattime_2011-03-02:
+    configuration: ''
+    deterministic: true
+number_of_feature_steps: 1
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: SAT11-HAND-GNNON-PAR1

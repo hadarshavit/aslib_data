@@ -1,0 +1,136 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 3600.0
+default_steps:
+- GNN
+feature_steps:
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+features_cutoff_memory: '?'
+features_cutoff_time: '60'
+features_deterministic:
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+features_stochastic: ''
+maximize:
+- false
+metainfo_algorithms:
+  ADS-cryptominisat:
+    configuration: ''
+    deterministic: true
+  ADS-cryptominisat-autotune:
+    configuration: ''
+    deterministic: true
+  ADS-dccaSatToRiss:
+    configuration: ''
+    deterministic: true
+  ADS-glucose-adapt:
+    configuration: ''
+    deterministic: true
+  ADS-glucose-community-switching:
+    configuration: ''
+    deterministic: true
+  BreakIDGlucose2:
+    configuration: ''
+    deterministic: true
+  CCAglucose2015:
+    configuration: ''
+    deterministic: true
+  COMiniSatPS_Main_Sequence:
+    configuration: ''
+    deterministic: true
+  COMiniSatPS_Subdwarf:
+    configuration: ''
+    deterministic: true
+  Glucose_nbSat:
+    configuration: ''
+    deterministic: true
+  Glucose_nbSatRsltn:
+    configuration: ''
+    deterministic: true
+  GlueMiniSat_2.2.10:
+    configuration: ''
+    deterministic: true
+  GlueMiniSat_2.2.10-5:
+    configuration: ''
+    deterministic: true
+  Lingeling_sr15bal:
+    configuration: ''
+    deterministic: true
+  Lingeling_sr15baq:
+    configuration: ''
+    deterministic: true
+  Nigma-1.2.86:
+    configuration: ''
+    deterministic: true
+  Nigma-1.2.87:
+    configuration: ''
+    deterministic: true
+  abcdSAT:
+    configuration: ''
+    deterministic: true
+  glucose-default:
+    configuration: ''
+    deterministic: true
+  glueminisat-Actmini:
+    configuration: ''
+    deterministic: true
+  minisat_BCD:
+    configuration: ''
+    deterministic: true
+  multi-sat-g2_0:
+    configuration: ''
+    deterministic: true
+  multi-sat-g2_2:
+    configuration: ''
+    deterministic: true
+  or-tools:
+    configuration: ''
+    deterministic: true
+  ratselfax_cnf_215_final:
+    configuration: ''
+    deterministic: true
+  riss_505_1:
+    configuration: ''
+    deterministic: true
+  riss_505_2:
+    configuration: ''
+    deterministic: true
+  satUZK-seq:
+    configuration: ''
+    deterministic: true
+number_of_feature_steps: 1
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: SAT15-INDU-GNNON-PAR1

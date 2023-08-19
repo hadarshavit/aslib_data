@@ -1,0 +1,94 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 300
+algorithms_deterministic:
+- clasp-cssc_clasp-2.1-sat-t1
+- forl-nodrup_forl-nodrup-params
+- gnovelty+GCa_gnovelty+GCa-params
+- gnovelty+GCwa_gnovelty+GCwa-params
+- gnovelty+PCL_gnovelty+PCL-params
+- lingeling_lingeling-params-mixed
+- riss3g_riss3g-params
+- sat4j_sat4j-params
+- simpsat_simpsat-params
+- Solver43_Solver43-params
+algorithms_stochastic: 'null'
+default_steps:
+- GNN
+feature_steps:
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+features_cutoff_memory: '?'
+features_cutoff_time: '?'
+features_deterministic:
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+features_stochastic: ''
+maximize:
+- false
+metainfo_algorithms:
+  Solver43_Solver43-params:
+    configuration: ''
+    deterministic: 'true'
+  clasp-cssc_clasp-2.1-sat-t1:
+    configuration: ''
+    deterministic: 'true'
+  forl-nodrup_forl-nodrup-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+GCa_gnovelty+GCa-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+GCwa_gnovelty+GCwa-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+PCL_gnovelty+PCL-params:
+    configuration: ''
+    deterministic: 'true'
+  lingeling_lingeling-params-mixed:
+    configuration: ''
+    deterministic: 'true'
+  riss3g_riss3g-params:
+    configuration: ''
+    deterministic: 'true'
+  sat4j_sat4j-params:
+    configuration: ''
+    deterministic: 'true'
+  simpsat_simpsat-params:
+    configuration: ''
+    deterministic: 'true'
+number_of_feature_steps: 1
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: CSSC-LABS-300s-2day-GNNON-PAR1
