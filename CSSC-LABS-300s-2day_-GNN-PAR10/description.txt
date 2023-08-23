@@ -1,0 +1,377 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 300
+algorithms_deterministic:
+- clasp-cssc_clasp-2.1-sat-t1
+- forl-nodrup_forl-nodrup-params
+- gnovelty+GCa_gnovelty+GCa-params
+- gnovelty+GCwa_gnovelty+GCwa-params
+- gnovelty+PCL_gnovelty+PCL-params
+- lingeling_lingeling-params-mixed
+- riss3g_riss3g-params
+- sat4j_sat4j-params
+- simpsat_simpsat-params
+- Solver43_Solver43-params
+algorithms_stochastic: 'null'
+default_steps:
+- Pre
+- Basic
+feature_steps:
+  Basic:
+    provides:
+    - BINARY+
+    - VCG-CLAUSE-min
+    - POSNEG-RATIO-CLAUSE-entropy
+    - POSNEG-RATIO-CLAUSE-max
+    - POSNEG-RATIO-CLAUSE-coeff-variation
+    - TRINARY+
+    - vars-clauses-ratio
+    - UNARY
+    - POSNEG-RATIO-CLAUSE-mean
+    - VCG-CLAUSE-coeff-variation
+    - POSNEG-RATIO-CLAUSE-min
+    - VCG-CLAUSE-max
+    - VCG-CLAUSE-entropy
+    - VCG-CLAUSE-mean
+    requires:
+    - Pre
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+    - gnn_16
+    - gnn_17
+    - gnn_18
+    - gnn_19
+    - gnn_20
+    - gnn_21
+    - gnn_22
+    - gnn_23
+    - gnn_24
+    - gnn_25
+    - gnn_26
+    - gnn_27
+    - gnn_28
+    - gnn_29
+    - gnn_30
+    - gnn_31
+    - gnn_32
+    - gnn_33
+    - gnn_34
+    - gnn_35
+    - gnn_36
+    - gnn_37
+    - gnn_38
+    - gnn_39
+    - gnn_40
+    - gnn_41
+    - gnn_42
+    - gnn_43
+    - gnn_44
+    - gnn_45
+    - gnn_46
+    - gnn_47
+    - gnn_48
+    - gnn_49
+    - gnn_50
+    - gnn_51
+    - gnn_52
+    - gnn_53
+    - gnn_54
+    - gnn_55
+    - gnn_56
+    - gnn_57
+    - gnn_58
+    - gnn_59
+    - gnn_60
+    - gnn_61
+    - gnn_62
+    - gnn_63
+  Pre:
+    provides:
+    - nvars
+    - nclausesOrig
+    - nclauses
+    - reducedVars
+    - nvarsOrig
+    - reducedClauses
+  cl:
+    provides:
+    - cl-num-q25
+    - cl-num-min
+    - cl-size-mean
+    - cl-num-max
+    - cl-num-mean
+    - cl-num-q10
+    - cl-size-q90
+    - cl-size-min
+    - cl-size-q75
+    - cl-size-q25
+    - cl-num-q75
+    - cl-num-q50
+    - cl-size-coeff-variation
+    - cl-num-q90
+    - cl-size-q50
+    - cl-num-coeff-variation
+    - cl-size-q10
+    - cl-size-max
+    requires:
+    - Pre
+  lobjois:
+    provides:
+    - lobjois-log-num-nodes-over-vars
+    - lobjois-mean-depth-over-vars
+    requires:
+    - Pre
+  ls-gsat:
+    provides:
+    - gsat_BestAvgImprovement_CoeffVariance
+    - gsat_FirstLocalMinStep_Q.90
+    - gsat_FirstLocalMinRatio_Mean
+    - gsat_FirstLocalMinStep_Q.10
+    - gsat_FirstLocalMinStep_Median
+    - gsat_BestSolution_CoeffVariance
+    - gsat_BestAvgImprovement_Mean
+    - gsat_FirstLocalMinStep_CoeffVariance
+    - gsat_BestSolution_Mean
+    - gsat_FirstLocalMinRatio_CoeffVariance
+    - gsat_FirstLocalMinStep_Mean
+    requires:
+    - Pre
+  ls-saps:
+    provides:
+    - saps_FirstLocalMinStep_Median
+    - saps_FirstLocalMinRatio_CoeffVariance
+    - saps_FirstLocalMinStep_Q.90
+    - saps_FirstLocalMinStep_Q.10
+    - saps_FirstLocalMinStep_CoeffVariance
+    - saps_BestSolution_Mean
+    - saps_BestAvgImprovement_CoeffVariance
+    - saps_BestSolution_CoeffVariance
+    - saps_BestAvgImprovement_Mean
+    - saps_FirstLocalMinStep_Mean
+    - saps_FirstLocalMinRatio_Mean
+    requires:
+    - Pre
+  sp:
+    provides:
+    - SP-bias-coeff-variation
+    - SP-unconstraint-q75
+    - SP-bias-q50
+    - SP-bias-q75
+    - SP-unconstraint-min
+    - SP-unconstraint-q25
+    - SP-bias-max
+    - SP-unconstraint-mean
+    - SP-unconstraint-max
+    - SP-unconstraint-coeff-variation
+    - SP-unconstraint-q50
+    - SP-bias-mean
+    - SP-unconstraint-q10
+    - SP-bias-min
+    - SP-unconstraint-q90
+    - SP-bias-q90
+    - SP-bias-q25
+    - SP-bias-q10
+    requires:
+    - Pre
+features_cutoff_memory: '?'
+features_cutoff_time: '?'
+features_deterministic:
+- cl-size-mean
+- SP-bias-q50
+- cl-num-max
+- cl-num-q10
+- SP-unconstraint-coeff-variation
+- SP-unconstraint-q90
+- SP-bias-coeff-variation
+- gsat_BestSolution_CoeffVariance
+- cl-size-q75
+- saps_BestAvgImprovement_CoeffVariance
+- SP-bias-mean
+- saps_BestAvgImprovement_Mean
+- SP-bias-q90
+- lobjois-log-num-nodes-over-vars
+- VCG-CLAUSE-mean
+- cl-num-coeff-variation
+- saps_FirstLocalMinStep_Q.10
+- gsat_BestSolution_Mean
+- VCG-CLAUSE-coeff-variation
+- cl-num-q90
+- VCG-CLAUSE-entropy
+- gsat_FirstLocalMinStep_Q.10
+- SP-unconstraint-max
+- gsat_FirstLocalMinStep_CoeffVariance
+- SP-bias-min
+- SP-unconstraint-q75
+- cl-size-min
+- SP-bias-max
+- saps_BestSolution_Mean
+- SP-unconstraint-q10
+- cl-num-q50
+- cl-size-q50
+- gsat_FirstLocalMinStep_Mean
+- cl-num-min
+- nclausesOrig
+- gsat_FirstLocalMinRatio_Mean
+- SP-bias-q75
+- UNARY
+- VCG-CLAUSE-max
+- cl-size-q10
+- cl-num-q25
+- VCG-CLAUSE-min
+- cl-size-q90
+- nvarsOrig
+- nvars
+- BINARY+
+- saps_FirstLocalMinStep_Median
+- nclauses
+- SP-unconstraint-q50
+- cl-size-q25
+- cl-num-q75
+- vars-clauses-ratio
+- gsat_FirstLocalMinRatio_CoeffVariance
+- gsat_BestAvgImprovement_CoeffVariance
+- gsat_BestAvgImprovement_Mean
+- POSNEG-RATIO-CLAUSE-min
+- gsat_FirstLocalMinStep_Q.90
+- saps_FirstLocalMinStep_Q.90
+- SP-unconstraint-mean
+- cl-size-coeff-variation
+- saps_FirstLocalMinRatio_Mean
+- SP-bias-q10
+- saps_BestSolution_CoeffVariance
+- reducedClauses
+- SP-bias-q25
+- TRINARY+
+- saps_FirstLocalMinRatio_CoeffVariance
+- SP-unconstraint-q25
+- saps_FirstLocalMinStep_CoeffVariance
+- saps_FirstLocalMinStep_Mean
+- lobjois-mean-depth-over-vars
+- POSNEG-RATIO-CLAUSE-entropy
+- gsat_FirstLocalMinStep_Median
+- cl-num-mean
+- POSNEG-RATIO-CLAUSE-mean
+- reducedVars
+- POSNEG-RATIO-CLAUSE-max
+- POSNEG-RATIO-CLAUSE-coeff-variation
+- SP-unconstraint-min
+- cl-size-max
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+- gnn_16
+- gnn_17
+- gnn_18
+- gnn_19
+- gnn_20
+- gnn_21
+- gnn_22
+- gnn_23
+- gnn_24
+- gnn_25
+- gnn_26
+- gnn_27
+- gnn_28
+- gnn_29
+- gnn_30
+- gnn_31
+- gnn_32
+- gnn_33
+- gnn_34
+- gnn_35
+- gnn_36
+- gnn_37
+- gnn_38
+- gnn_39
+- gnn_40
+- gnn_41
+- gnn_42
+- gnn_43
+- gnn_44
+- gnn_45
+- gnn_46
+- gnn_47
+- gnn_48
+- gnn_49
+- gnn_50
+- gnn_51
+- gnn_52
+- gnn_53
+- gnn_54
+- gnn_55
+- gnn_56
+- gnn_57
+- gnn_58
+- gnn_59
+- gnn_60
+- gnn_61
+- gnn_62
+- gnn_63
+features_stochastic: ''
+maximize:
+- false
+metainfo_algorithms:
+  Solver43_Solver43-params:
+    configuration: ''
+    deterministic: 'true'
+  clasp-cssc_clasp-2.1-sat-t1:
+    configuration: ''
+    deterministic: 'true'
+  forl-nodrup_forl-nodrup-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+GCa_gnovelty+GCa-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+GCwa_gnovelty+GCwa-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+PCL_gnovelty+PCL-params:
+    configuration: ''
+    deterministic: 'true'
+  lingeling_lingeling-params-mixed:
+    configuration: ''
+    deterministic: 'true'
+  riss3g_riss3g-params:
+    configuration: ''
+    deterministic: 'true'
+  sat4j_sat4j-params:
+    configuration: ''
+    deterministic: 'true'
+  simpsat_simpsat-params:
+    configuration: ''
+    deterministic: 'true'
+number_of_feature_steps: 10
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: CSSC-LABS-300s-2day-GNN-PAR10

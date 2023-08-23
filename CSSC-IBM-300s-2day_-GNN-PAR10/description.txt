@@ -1,0 +1,491 @@
+algorithm_cutoff_memory: '?'
+algorithm_cutoff_time: 300
+algorithms_deterministic:
+- clasp-cssc_clasp-2.1-sat-t1
+- forl-nodrup_forl-nodrup-params
+- gnovelty+GCa_gnovelty+GCa-params
+- gnovelty+GCwa_gnovelty+GCwa-params
+- gnovelty+PCL_gnovelty+PCL-params
+- lingeling_lingeling-params-mixed
+- riss3g_riss3g-params
+- sat4j_sat4j-params
+- simpsat_simpsat-params
+- Solver43_Solver43-params
+algorithms_stochastic: 'null'
+default_steps:
+- Pre
+- Basic
+- KLB
+- CG
+feature_steps:
+  Basic:
+    provides:
+    - VCG_CLAUSE_max
+    - BINARYp
+    - TRINARYp
+    - POSNEG_RATIO_CLAUSE_entropy
+    - VCG_CLAUSE_entropy
+    - vars_clauses_ratio
+    - UNARY
+    - POSNEG_RATIO_CLAUSE_coeff_variation
+    - POSNEG_RATIO_CLAUSE_max
+    - VCG_CLAUSE_mean
+    - POSNEG_RATIO_CLAUSE_min
+    - VCG_CLAUSE_min
+    - POSNEG_RATIO_CLAUSE_mean
+    - VCG_CLAUSE_coeff_variation
+    requires:
+    - Pre
+  CG:
+    provides:
+    - CG_max
+    - cluster_coeff_max
+    - cluster_coeff_min
+    - cluster_coeff_entropy
+    - CG_coeff_variation
+    - CG_min
+    - cluster_coeff_mean
+    - CG_entropy
+    - CG_mean
+    - cluster_coeff_coeff_variation
+    requires:
+    - Pre
+  DIAMETER:
+    provides:
+    - DIAMETER_coeff_variation
+    - DIAMETER_max
+    - DIAMETER_min
+    - DIAMETER_mean
+    - DIAMETER_entropy
+    requires:
+    - Pre
+  GNN:
+    'provides:':
+    - gnn_0
+    - gnn_1
+    - gnn_2
+    - gnn_3
+    - gnn_4
+    - gnn_5
+    - gnn_6
+    - gnn_7
+    - gnn_8
+    - gnn_9
+    - gnn_10
+    - gnn_11
+    - gnn_12
+    - gnn_13
+    - gnn_14
+    - gnn_15
+    - gnn_16
+    - gnn_17
+    - gnn_18
+    - gnn_19
+    - gnn_20
+    - gnn_21
+    - gnn_22
+    - gnn_23
+    - gnn_24
+    - gnn_25
+    - gnn_26
+    - gnn_27
+    - gnn_28
+    - gnn_29
+    - gnn_30
+    - gnn_31
+    - gnn_32
+    - gnn_33
+    - gnn_34
+    - gnn_35
+    - gnn_36
+    - gnn_37
+    - gnn_38
+    - gnn_39
+    - gnn_40
+    - gnn_41
+    - gnn_42
+    - gnn_43
+    - gnn_44
+    - gnn_45
+    - gnn_46
+    - gnn_47
+    - gnn_48
+    - gnn_49
+    - gnn_50
+    - gnn_51
+    - gnn_52
+    - gnn_53
+    - gnn_54
+    - gnn_55
+    - gnn_56
+    - gnn_57
+    - gnn_58
+    - gnn_59
+    - gnn_60
+    - gnn_61
+    - gnn_62
+    - gnn_63
+  KLB:
+    provides:
+    - horn_clauses_fraction
+    - VG_mean
+    - VG_min
+    - HORNY_VAR_max
+    - POSNEG_RATIO_VAR_min
+    - POSNEG_RATIO_VAR_mean
+    - HORNY_VAR_min
+    - VCG_VAR_max
+    - POSNEG_RATIO_VAR_entropy
+    - HORNY_VAR_entropy
+    - HORNY_VAR_mean
+    - POSNEG_RATIO_VAR_max
+    - VG_coeff_variation
+    - VCG_VAR_mean
+    - VCG_VAR_entropy
+    - HORNY_VAR_coeff_variation
+    - VCG_VAR_coeff_variation
+    - VCG_VAR_min
+    - VG_max
+    - POSNEG_RATIO_VAR_stdev
+    requires:
+    - Pre
+  Pre:
+    provides:
+    - nvars
+    - nclausesOrig
+    - nclauses
+    - reducedVars
+    - nvarsOrig
+    - reducedClauses
+  cl:
+    provides:
+    - cl_size_coeff_variation
+    - cl_size_max
+    - cl_num_coeff_variation
+    - cl_num_max
+    - cl_size_q90
+    - cl_size_q10
+    - cl_num_q90
+    - cl_size_q25
+    - cl_size_mean
+    - cl_num_q50
+    - cl_num_q10
+    - cl_size_q50
+    - cl_num_q75
+    - cl_num_min
+    - cl_num_mean
+    - cl_num_q25
+    - cl_size_min
+    - cl_size_q75
+    requires:
+    - Pre
+  lobjois:
+    provides:
+    - lobjois_mean_depth_over_vars
+    - lobjois_log_num_nodes_over_vars
+    requires:
+    - Pre
+  lp:
+    provides:
+    - LPSLack_min
+    - LPSLack_mean
+    - LPSLack_max
+    - LP_OBJ
+    - LPSLack_coeff_variation
+    - lpIntRatio
+    requires:
+    - Pre
+  ls_gsat:
+    provides:
+    - gsat_BestAvgImprovement_CoeffVariance
+    - gsat_FirstLocalMinRatio_Mean
+    - gsat_FirstLocalMinStep_Median
+    - gsat_BestSolution_CoeffVariance
+    - gsat_BestAvgImprovement_Mean
+    - gsat_FirstLocalMinStep_CoeffVariance
+    - gsat_BestSolution_Mean
+    - gsat_FirstLocalMinStep_Q10
+    - gsat_FirstLocalMinStep_Mean
+    - gsat_FirstLocalMinRatio_CoeffVariance
+    - gsat_FirstLocalMinStep_Q90
+    requires:
+    - Pre
+  ls_saps:
+    provides:
+    - saps_FirstLocalMinStep_Median
+    - saps_FirstLocalMinRatio_CoeffVariance
+    - saps_FirstLocalMinStep_Q10
+    - saps_FirstLocalMinStep_CoeffVariance
+    - saps_BestSolution_Mean
+    - saps_BestAvgImprovement_CoeffVariance
+    - saps_BestSolution_CoeffVariance
+    - saps_BestAvgImprovement_Mean
+    - saps_FirstLocalMinStep_Mean
+    - saps_FirstLocalMinRatio_Mean
+    - saps_FirstLocalMinStep_Q90
+    requires:
+    - Pre
+  sp:
+    provides:
+    - SP_bias_q90
+    - SP_unconstraint_q50
+    - SP_bias_mean
+    - SP_unconstraint_q75
+    - SP_unconstraint_coeff_variation
+    - SP_unconstraint_q90
+    - SP_bias_coeff_variation
+    - SP_bias_q50
+    - SP_bias_q25
+    - SP_bias_max
+    - SP_unconstraint_mean
+    - SP_unconstraint_max
+    - SP_bias_q10
+    - SP_bias_min
+    - SP_unconstraint_min
+    - SP_unconstraint_q25
+    - SP_unconstraint_q10
+    - SP_bias_q75
+    requires:
+    - Pre
+  unit:
+    provides:
+    - vars_reduced_depth_256
+    - vars_reduced_depth_16
+    - vars_reduced_depth_1
+    - vars_reduced_depth_4
+    - vars_reduced_depth_64
+    requires:
+    - Pre
+features_cutoff_memory: '?'
+features_cutoff_time: '?'
+features_deterministic:
+- nvars
+- LPSLack_max
+- saps_FirstLocalMinStep_Median
+- CG_max
+- nclauses
+- cluster_coeff_max
+- LPSLack_mean
+- CG_min
+- SP_unconstraint_q75
+- SP_bias_mean
+- DIAMETER_mean
+- cl_num_q50
+- gsat_FirstLocalMinStep_Q10
+- SP_unconstraint_q90
+- VCG_CLAUSE_min
+- VCG_CLAUSE_coeff_variation
+- BINARYp
+- HORNY_VAR_mean
+- gsat_BestSolution_CoeffVariance
+- cl_num_min
+- SP_bias_max
+- VCG_VAR_mean
+- saps_BestAvgImprovement_CoeffVariance
+- saps_BestAvgImprovement_Mean
+- cluster_coeff_mean
+- gsat_FirstLocalMinRatio_CoeffVariance
+- cl_size_min
+- CG_coeff_variation
+- SP_unconstraint_q10
+- POSNEG_RATIO_VAR_stdev
+- gsat_BestAvgImprovement_CoeffVariance
+- DIAMETER_coeff_variation
+- cl_num_max
+- VCG_CLAUSE_entropy
+- cl_size_q10
+- lobjois_mean_depth_over_vars
+- POSNEG_RATIO_VAR_mean
+- POSNEG_RATIO_VAR_min
+- cl_num_q90
+- lpIntRatio
+- gsat_BestSolution_Mean
+- gsat_BestAvgImprovement_Mean
+- SP_unconstraint_coeff_variation
+- SP_bias_coeff_variation
+- cl_num_q10
+- cluster_coeff_coeff_variation
+- vars_clauses_ratio
+- SP_unconstraint_mean
+- VCG_VAR_entropy
+- SP_unconstraint_max
+- gsat_FirstLocalMinStep_CoeffVariance
+- SP_bias_min
+- vars_reduced_depth_256
+- POSNEG_RATIO_CLAUSE_coeff_variation
+- VCG_VAR_coeff_variation
+- saps_FirstLocalMinRatio_Mean
+- SP_unconstraint_q25
+- CG_mean
+- cl_num_q25
+- VCG_VAR_min
+- VG_max
+- SP_unconstraint_q50
+- VG_mean
+- VG_min
+- saps_FirstLocalMinStep_Q10
+- VCG_CLAUSE_mean
+- POSNEG_RATIO_CLAUSE_max
+- saps_BestSolution_CoeffVariance
+- vars_reduced_depth_64
+- LPSLack_coeff_variation
+- reducedClauses
+- SP_bias_q50
+- SP_bias_q25
+- LPSLack_min
+- cl_size_q50
+- VCG_CLAUSE_max
+- saps_FirstLocalMinRatio_CoeffVariance
+- DIAMETER_max
+- LP_OBJ
+- POSNEG_RATIO_VAR_max
+- saps_FirstLocalMinStep_CoeffVariance
+- cluster_coeff_min
+- cl_num_mean
+- saps_BestSolution_Mean
+- vars_reduced_depth_16
+- saps_FirstLocalMinStep_Mean
+- gsat_FirstLocalMinStep_Mean
+- cl_size_q75
+- POSNEG_RATIO_CLAUSE_mean
+- horn_clauses_fraction
+- SP_bias_q90
+- cl_size_coeff_variation
+- nclausesOrig
+- cl_size_max
+- cl_num_coeff_variation
+- gsat_FirstLocalMinRatio_Mean
+- vars_reduced_depth_4
+- HORNY_VAR_max
+- gsat_FirstLocalMinStep_Median
+- POSNEG_RATIO_CLAUSE_entropy
+- DIAMETER_entropy
+- cl_size_q25
+- UNARY
+- cl_size_q90
+- cl_size_mean
+- lobjois_log_num_nodes_over_vars
+- POSNEG_RATIO_CLAUSE_min
+- reducedVars
+- HORNY_VAR_min
+- saps_FirstLocalMinStep_Q90
+- VCG_VAR_max
+- POSNEG_RATIO_VAR_entropy
+- cl_num_q75
+- HORNY_VAR_entropy
+- TRINARYp
+- VG_coeff_variation
+- SP_bias_q10
+- SP_unconstraint_min
+- HORNY_VAR_coeff_variation
+- vars_reduced_depth_1
+- DIAMETER_min
+- CG_entropy
+- cluster_coeff_entropy
+- nvarsOrig
+- gsat_FirstLocalMinStep_Q90
+- SP_bias_q75
+- gnn_0
+- gnn_1
+- gnn_2
+- gnn_3
+- gnn_4
+- gnn_5
+- gnn_6
+- gnn_7
+- gnn_8
+- gnn_9
+- gnn_10
+- gnn_11
+- gnn_12
+- gnn_13
+- gnn_14
+- gnn_15
+- gnn_16
+- gnn_17
+- gnn_18
+- gnn_19
+- gnn_20
+- gnn_21
+- gnn_22
+- gnn_23
+- gnn_24
+- gnn_25
+- gnn_26
+- gnn_27
+- gnn_28
+- gnn_29
+- gnn_30
+- gnn_31
+- gnn_32
+- gnn_33
+- gnn_34
+- gnn_35
+- gnn_36
+- gnn_37
+- gnn_38
+- gnn_39
+- gnn_40
+- gnn_41
+- gnn_42
+- gnn_43
+- gnn_44
+- gnn_45
+- gnn_46
+- gnn_47
+- gnn_48
+- gnn_49
+- gnn_50
+- gnn_51
+- gnn_52
+- gnn_53
+- gnn_54
+- gnn_55
+- gnn_56
+- gnn_57
+- gnn_58
+- gnn_59
+- gnn_60
+- gnn_61
+- gnn_62
+- gnn_63
+features_stochastic: ''
+maximize:
+- false
+metainfo_algorithms:
+  Solver43_Solver43-params:
+    configuration: ''
+    deterministic: 'true'
+  clasp-cssc_clasp-2.1-sat-t1:
+    configuration: ''
+    deterministic: 'true'
+  forl-nodrup_forl-nodrup-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+GCa_gnovelty+GCa-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+GCwa_gnovelty+GCwa-params:
+    configuration: ''
+    deterministic: 'true'
+  gnovelty+PCL_gnovelty+PCL-params:
+    configuration: ''
+    deterministic: 'true'
+  lingeling_lingeling-params-mixed:
+    configuration: ''
+    deterministic: 'true'
+  riss3g_riss3g-params:
+    configuration: ''
+    deterministic: 'true'
+  sat4j_sat4j-params:
+    configuration: ''
+    deterministic: 'true'
+  simpsat_simpsat-params:
+    configuration: ''
+    deterministic: 'true'
+number_of_feature_steps: 13
+performance_measures:
+- runtime
+performance_type:
+- runtime
+scenario_id: CSSC-IBM-300s-2day-GNN-PAR10
